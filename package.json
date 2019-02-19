@@ -1,0 +1,42 @@
+{
+  "name": "next-ts-starter",
+  "version": "1.0.0",
+  "description":
+    "Start your web project with Next.js, JEST, react-testing-library, and Bootstrap.",
+  "main": "dist/server/index.js",
+  "repository": "git@github.com:felixbaron/bollingersqueeze.com.git",
+  "author": "Felix Baron <45421716+felixbaron@users.noreply.github.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next",
+    "export":
+      "yarn build && next export -o docs  && echo \"\" > docs/.nojekyll",
+    "build": "next build",
+    "start": "next start",
+    "test": "./node_modules/.bin/jest --env=jsdom --coverage",
+    "upgrade": "yarn upgrade --latest"
+  },
+  "dependencies": {
+    "@zeit/next-sass": "^1.0.1",
+    "@zeit/next-typescript": "^1.1.1",
+    "bootstrap": "^4.3.1",
+    "next": "^8.0.1",
+    "node-sass": "^4.11.0",
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2",
+    "reactstrap": "^7.1.0"
+  },
+  "devDependencies": {
+    "@types/bootstrap": "^4.2.2",
+    "@types/jest": "^24.0.6",
+    "@types/next": "^8.0.1",
+    "@types/react": "^16.8.3",
+    "@types/reactstrap": "^7.1.3",
+    "jest": "^24.1.0",
+    "jest-dom": "^3.1.2",
+    "react-testing-library": "^5.9.0",
+    "ts-jest": "^24.0.0",
+    "tslint-react": "^3.6.0",
+    "typescript": "^3.3.3"
+  }
+}

@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+- '10'
+- '11'
+cache: yarn
+before_deploy:
+- yarn export
+deploy:
+  local-dir: docs
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+env:
+  matrix:
+    secure: fYu9mkq7/f5ODL8GYCtVQ2jiiAD80HQp5ZjWh6yrwzUxM1kYlps0gFWETKjoLnfuR7Z9aEsxnywe+fcsZPmDdqtGmwZBnnvFQ/8SoxM21oCberWr+EXEiGXebh+BamuuPTeKRI6LWNCQ6IotAcVMDnnWiuYqrjv/piVNjPAjSbhPFzhnVY8wDjgySnoAtOcTr8SKtiq1lXiO4yqbcauQJs6KrxBKBJPEOEGnpfpS4l44odo4yzhuzvoWXPmdwFt5MSh7GbiG2ZFRI+4VsPKkQxrjehEpcY9mNEfqeskxw79AJXfl4wjfB/PpgurTunNkiU6jMVWinvA6wTzjKo99PJKaLcSU5NuuA9Ke08d/zRADCJM2vkwq/W9bbn4lxgoz8g86eTJAaVLLh9BlPj3v/NOpTT5yrZi4tneateYiMy4tnJN/Z7l+YM5BLeGYv9P2m9cgeiEKm7++JjfyKY5l9NfNvsvqmOBMFPB+hKMrveLatz8+z+lH/H+x03g3Ic9fC2Ea8dsTv975EgjscH4In+OmAEDXeRnOmE/E4gX1BjuELilhH8eLiIgSjvHH6hHK1lowG4rITEfyevMLtnZlciMuBBMJHY9acJxKgBCaszGzBwBLYHTQBoJ5xarCwZ7h6PGyiCR9lhHpFqT/qgkKNL2bhbGw+btJmnXjOLpVTzs=
